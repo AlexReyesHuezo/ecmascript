@@ -22,7 +22,7 @@ console.log(`${bar}: is an 'constant variable', does not allow to change its val
 //------------------------------------------------------------------------------
 
 // before
-function foo(name, age, country) {
+function foo(cognomen, age, country) {
     var cognomen = cognomen || 'Guest';
     var age = age || 25;
     var country = country || 'UKR';
@@ -46,14 +46,14 @@ foobar('Alex', 26, 'SLV');
 // -----------------------------------------------------------------------------
 
 // before
-let greeting = 'Hi';
-let person = 'Alex';
-console.log(greeting + ' ' + person + '!');
+let greet = 'Hi';
+let dude = 'Alex';
+console.log(greet + ' ' + dude + '!');
 
 // after
-let greeting = 'Hello';
+let salute = 'Hello';
 let folk = 'World';
-console.log(`${greeting} ${folk}!`);
+console.log(`${salute} ${folk}!`);
 
 
 // Multiline with backticks `` (Multilínea con acentos graves)
@@ -110,3 +110,81 @@ console.table(allTeam);
 // after
 let streamers = ['jonmircha', ...frontendTeam, 'Hola Mundo', 'MoureDev', ...backendTeam];
 console.table(streamers);
+
+
+// Arrow functions (Funciones flecha)
+// -----------------------------------------------------------------------------
+
+// before
+
+// Simple anonymous function (función anónima simple)
+const username = [
+    {name: 'Pedro', generation: '1'},
+    {name: 'Juan', generation: '2'},
+    {name: 'Marta', generation: '3'},
+];
+
+let listOfNames = username.map(function (user) {
+    console.log(user.name);
+});
+
+// after
+let listOfUsers = username.map(user => console.log(user.name));
+
+// other examples with arrow functions
+
+// with arrow functions, we can omit the return keyword
+let listOfUsers2 = username.map(user => user.name);
+// with arrow functions, we can omit the curly braces
+let listOfUsers3 = username.map(user => `${user.name} (${user.generation})`);
+// with arrow functions, we can return an object using the object literal syntax
+const listOfUsers4 = username.map(({ user, generation }) => `${user} (${generation})`);
+// with arrow functions, we can add a lot of parameters
+const listOfUsers5 = (name, generation) => `${name} (${generation})`;
+
+
+// Promises (Promesas)
+// -----------------------------------------------------------------------------
+
+// before
+
+// after
+
+
+// Params in objects (Parámetros en objetos)
+// -----------------------------------------------------------------------------
+
+// before
+let noun = 'Alex';
+let years = 27;
+
+target = { noun: noun, years: years };
+
+// after
+// In ES6, you can use the same name for the property and the parameter
+targetPerson = { noun, years };
+console.log(targetPerson);
+
+
+// Classes (Clases)
+// -----------------------------------------------------------------------------
+
+// before
+
+// after
+
+
+// Modules (Módulos)
+// -----------------------------------------------------------------------------
+
+// before
+
+// after
+
+
+// Generators (Generadores)
+// -----------------------------------------------------------------------------
+
+// before
+
+// after
