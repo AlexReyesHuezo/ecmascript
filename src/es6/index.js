@@ -149,6 +149,22 @@ const listOfUsers5 = (name, generation) => `${name} (${generation})`;
 // before
 
 // after
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Hello');
+        }, 1500);
+
+        setTimeout(() => {
+            reject('Something went wrong');
+        }, 2500);
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('Hello again'))
+    .catch(error => console.log(error));
 
 
 // Params in objects (Parámetros en objetos)
@@ -172,19 +188,64 @@ console.log(targetPerson);
 // before
 
 // after
+class Calculator {
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new Calculator();
+console.log(calc.sum(2, 2));
 
 
 // Modules (Módulos)
 // -----------------------------------------------------------------------------
 
 // before
+const hello = require('./module');
+console.log(hello());
+
+// We can import multiple things with object syntax
 
 // after
+// with Babel, we can use the ES6 import syntax
+// We don't need to named the file with the same name as the module
+import {hello} from './module';
+console.log(hello());
 
+// We can named different like this:
+import { hello, bye as byeFunction} from './module';
+
+// We can import multiple things
+import * as allGreetings from './module'
+
+console.log(allGreetings.hello())
+console.log(allGreetings.bye)
 
 // Generators (Generadores)
 // -----------------------------------------------------------------------------
 
 // before
 
+
 // after
+
+function * helloWorld() {
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'world!';
+    }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
