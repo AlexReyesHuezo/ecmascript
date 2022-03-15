@@ -1,6 +1,13 @@
 // Includes (Incluye)
 // ------------------------------------------------------------
 
+// before
+const arr = [1, 2, 3, 4, 5];
+
+arr.indexOf(1) !== -1; // true
+arr.indexOf(10) !== -1; // false
+
+// after
 let numbers = [1, 2, 3, 4, 5];
 
 if (numbers.includes(1)) {
@@ -14,6 +21,10 @@ else {
 // Power operator (Operador de potencia)
 // ------------------------------------------------------------
 
+// before
+let power = Math.power(2, 3);
+
+// after
 let base = 2;
 let exponent = 3;
 let result = base ** exponent;
