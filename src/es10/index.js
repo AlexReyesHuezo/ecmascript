@@ -45,3 +45,20 @@ try {
 } catch {
     console.log(error);
 }
+
+// fromEntries (Convertir un array de pares clave/valor en un objeto)
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
+// ---------------------------------------------------------------------------------------------
+
+let fromEntries = [["name", "John"], ["age", 24]];
+
+console.log(Object.fromEntries(fromEntries));
+
+// symbol.description (Obtener la descripción de un elemento tipo símbolo)
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Symbol/description
+// ---------------------------------------------------------------------------------------------
+
+let mySymbol = "Symbol's description";
+let symbol = Symbol(mySymbol);
+
+console.log(symbol.description);
