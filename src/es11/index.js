@@ -43,3 +43,25 @@ Promise.allSettled([promise1, promise2, promise3, promise4, promise5])
 
 console.log(window);
 console.log(globalThis); // It's the same as window in the browser.
+
+
+// Nullish Coalescing Operator
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+// --------------------------------------------------------------------------------------------
+
+const bar = null ?? 'default';
+console.log(bar);
+
+
+// Optional Chaining
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+// --------------------------------------------------------------------------------------------
+
+const user = {};
+console.log(user?.profile?.name); // undefined
+
+if(user?.profile?.name) {
+    console.log(user.profile.name);
+} else {
+    console.log('failed');
+}
