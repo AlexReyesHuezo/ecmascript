@@ -1,5 +1,6 @@
 // Includes (Incluye)
-// ------------------------------------------------------------
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/includes
+// --------------------------------------------------------------------------------------------
 
 // before
 const arr = [1, 2, 3, 4, 5];
@@ -19,7 +20,8 @@ else {
 
 
 // Power operator (Operador de potencia)
-// ------------------------------------------------------------
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/**
+// --------------------------------------------------------------------------------------------
 
 // before
 let power = Math.power(2, 3);

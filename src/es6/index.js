@@ -1,4 +1,6 @@
-// let, const - ES6
+// let, const
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 // -----------------------------------------------------------------------------
 
 // before
@@ -19,6 +21,7 @@ console.log(`${bar}: is an 'constant variable', does not allow to change its val
 
 
 // Default params (Parámetros por defecto)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 //------------------------------------------------------------------------------
 
 // before
@@ -43,6 +46,7 @@ foobar('Alex', 26, 'SLV');
 
 
 // Template literals `${} '' ${}` (Literales de plantillas)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 // -----------------------------------------------------------------------------
 
 // before
@@ -75,6 +79,7 @@ console.log(quote);
 
 
 // Destructuring (Desestructuración)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 // -----------------------------------------------------------------------------
 
 // before
@@ -95,14 +100,16 @@ console.log(forename, age, country);
 const meal = ['🫓', '🍔', '🥪', '🥟', '🥘'];
 const [Pupusa, Hamburguesa, Sándwich, Empanada, Paella] = meal;
 console.log(Pupusa, Hamburguesa, Sándwich, Empanada, Paella);
+console.log(meal);
 
 
 // Spread operator ... (Operador de expansión)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 // -----------------------------------------------------------------------------
 
 // before
-const frontendTeam = ['ManzDev', 'midudev', 'CarlosAzaustre', 'SeDiceMashain', 'Baumannzone'];
-const backendTeam = ['GNDX', 'julianduque', 'GuillermoRodas', 'hdeleon.net', 'fazzttech'];
+const frontendTeam = ['ManzDev', 'midudev', 'CarlosAzaustre', 'GNDX', 'Baumannzone', 'GuillermoRodas'];
+const backendTeam = ['nicobytes', 'julianduque', 'peladonerd', 'hdeleon.net', 'fazzttech', 'jonalvarezz'];
 
 var allTeam = ['jonmircha', frontendTeam, 'Hola Mundo', 'MoureDev', backendTeam];
 console.table(allTeam);
@@ -113,6 +120,7 @@ console.table(streamers);
 
 
 // Arrow functions (Funciones flecha)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 // -----------------------------------------------------------------------------
 
 // before
@@ -144,6 +152,11 @@ const listOfUsers5 = (name, generation) => `${name} (${generation})`;
 
 
 // Promises (Promesas)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
 // -----------------------------------------------------------------------------
 
 // before
@@ -168,6 +181,7 @@ helloPromise()
 
 
 // Params in objects (Parámetros en objetos)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 // -----------------------------------------------------------------------------
 
 // before
@@ -183,6 +197,7 @@ console.log(targetPerson);
 
 
 // Classes (Clases)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 // -----------------------------------------------------------------------------
 
 // before
@@ -205,6 +220,7 @@ console.log(calc.sum(2, 2));
 
 
 // Modules (Módulos)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 // -----------------------------------------------------------------------------
 
 // before
@@ -229,6 +245,7 @@ console.log(allGreetings.hello())
 console.log(allGreetings.bye)
 
 // Generators (Generadores)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator
 // -----------------------------------------------------------------------------
 
 // before
