@@ -201,6 +201,19 @@ console.log(targetPerson);
 // -----------------------------------------------------------------------------
 
 // before
+function Calculator() {
+    this.valueA = 0;
+    this.valueB = 0;
+}
+
+Calculator.prototype.sum = function (valueA, valueB) {
+    this.valueA = valueA;
+    this.valueB = valueB;
+    return this.valueA + this.valueB;
+}
+
+const calc = new Calculator();
+console.log(calc.sum(2, 2));
 
 // after
 class Calculator {
